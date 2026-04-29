@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">PrimeraApp</string>
+    <string name="aceptar">ACEPTAR</string>
+    <string name="cancelar">CANCELAR</string>
+    <string name="titol">Titulo</string>
+    <string name="inNom">Intruduce tu Nombre</string>
+    <string name="nomA">Nombre Aqui</string>
+    <string name="hola">Esperant Nom</string>
+    <string name="segona">Segona Pantalla</string>
+    <string name="compartir">Compartir</string>
+    <string name="enviar_email">Enviar E-mail</string>
+    <string name="obrir_web">Obrir Web</string>
+    <string name="obrir_maps">Obrir Maps</string>
+    <string name="tornar_enrrera">Tornar Enrera</string>
+    <string name="llistat">Obrir Llistat</string>
+    <string name="item_1">Item 1</string>
+    <string name="item_2">Item 2</string>
+</resources>
