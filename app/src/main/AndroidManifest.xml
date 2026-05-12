@@ -13,7 +13,9 @@
         android:theme="@style/Theme.PrimeraApp">
         <activity
             android:name=".LlistatActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:configChanges="orientation|screenSize"
+            />
         <activity
             android:name=".MainActivity2"
             android:exported="false" />

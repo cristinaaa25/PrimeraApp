@@ -21,7 +21,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
     @Override
     public TaskAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.row, parent, false);
-        ViewHolder vh = new ViewHolder(v);
+        ViewHolder vh = new ViewHolder(v, listener);
         return vh;
     }
 
@@ -34,7 +34,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
 
     @Override
     public int getItemCount() {
-        return dataSet.size(); // canvi pel Duque
+        return dataSet.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements
@@ -42,10 +42,12 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
 
         TextView tvId, tvTask;
         OnItemClickListener onItemClickListener;
-        public ViewHolder(@NonNull View itemView) {
+        public ViewHolder(@NonNull View itemView, OnItemClickListener onItemClickListener) {
             super(itemView);
+            this.onItemClickListener = onItemClickListener;
             tvId = itemView.findViewById(R.id.row_id);
             tvTask = itemView.findViewById(R.id.row_desc);
+            tvTask.setOnClickListener(this);
         }
 
 

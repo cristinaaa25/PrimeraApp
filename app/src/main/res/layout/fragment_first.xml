@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".LlistatActivity"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:background="#2196F3"
+    android:orientation="horizontal"
+    tools:context=".FirstFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/hello_blank_fragment" />
 
     <EditText
-        android:id="@+id/textAfgir"
+        android:id="@+id/textAfgir2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="addClicked"
         android:text="Afegir" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rLlistat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-
-    <FrameLayout
-        android:id="@+id/frame"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rLlistat2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent" />
 
 </LinearLayout>
