@@ -12,10 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PrimeraApp">
         <activity
+            android:name=".SharedPrefActivity"
+            android:exported="false" />
+        <activity
             android:name=".LlistatActivity"
-            android:exported="false"
             android:configChanges="orientation|screenSize"
-            />
+            android:exported="false" />
         <activity
             android:name=".MainActivity2"
             android:exported="false" />

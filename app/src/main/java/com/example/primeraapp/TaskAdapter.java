@@ -13,8 +13,13 @@ import java.util.ArrayList;
 public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
 
     ArrayList<Task> dataSet;
+    OnItemClickListener listener;
     public TaskAdapter(ArrayList<Task> data) {
         dataSet = data;
+    }
+
+    public void setListener(OnItemClickListener listener) {
+        this.listener = listener;
     }
 
     @NonNull
@@ -53,16 +58,11 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
 
         @Override
         public void onClick(View view) {
-            onItemClickListener.onClick(view, getAdapterPosition());
+            onItemClickListener.onClick(view, getAdapterPosition(), dataSet.get(getAdapterPosition()).getTask());
         }
     }
 
     public interface OnItemClickListener {
-        public void onClick(View view, int position);
-    }
-
-    OnItemClickListener listener;
-    public void setClickListener(OnItemClickListener itemClickListener) {
-        this.listener = itemClickListener;
+        public void onClick(View view, int position, String task);
     }
 }

@@ -4,11 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#2196F3"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     tools:context=".FirstFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/hello_blank_fragment" />
@@ -24,7 +25,6 @@
         android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="addClicked"
         android:text="Afegir" />
 
     <androidx.recyclerview.widget.RecyclerView

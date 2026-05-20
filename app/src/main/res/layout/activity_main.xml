@@ -92,7 +92,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
-        android:layout_marginTop="21dp"
         android:layout_marginBottom="419dp"
         android:gravity="center"
         android:text="@string/hola"
@@ -109,7 +108,7 @@
         android:layout_width="189dp"
         android:layout_height="179dp"
         android:layout_marginStart="96dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="95dp"
         android:contentDescription="TODO"
         android:gravity="center"
@@ -142,6 +141,17 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonSegona" />
+    <Button
+        android:id="@+id/buttonSharedPref"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="obrirSharedPerf"
+        android:text="@string/shared_pref"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLlistat" />
 
 
     <Button
@@ -149,35 +159,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:layout_marginTop="56dp"
         android:gravity="center"
         android:onClick="compartirText"
         android:text="@string/compartir"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSegona" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonSharedPref" />
 
     <Button
         android:id="@+id/buttonEnviarEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:layout_marginTop="56dp"
         android:gravity="center"
         android:onClick="enviarEmail"
         android:text="@string/enviar_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.828"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSegona" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonSharedPref" />
 
     <Button
         android:id="@+id/buttonObrirWeb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:gravity="center"
         android:onClick="obrirWeb"
         android:text="@string/obrir_web"
@@ -191,7 +199,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:gravity="center"
         android:onClick="obrirMaps"
         android:text="@string/obrir_maps"

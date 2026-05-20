@@ -100,6 +100,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void obrirSharedPerf(View view) {
+        Intent intent = new Intent(getApplicationContext(), SharedPrefActivity.class);
+        startActivity(intent);
+    }
+
     public void obreSegona(View view) {
         Intent intent = new Intent(this, MainActivity2.class);
         activityResultLauncherText.launch(intent);

@@ -36,6 +36,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.activity.ktx)
     implementation(libs.appcompat)
     implementation(libs.fragment)
     implementation(libs.material)

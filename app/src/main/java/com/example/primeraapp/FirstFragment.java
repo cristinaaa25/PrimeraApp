@@ -2,6 +2,8 @@ package com.example.primeraapp;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -27,7 +29,7 @@ public class FirstFragment extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
     RecyclerView llistat;
-    EditText editTextAfegit;
+    EditText editText;
     private ArrayList<Task> dataSet;
 
     RecyclerView.LayoutManager layoutManager;
@@ -54,7 +56,7 @@ public class FirstFragment extends Fragment {
         Bundle args = new Bundle();
         //args.putString(ARG_PARAM1, param1);
         //args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
+        //fragment.setArguments(args);
         return fragment;
     }
 
@@ -67,6 +69,7 @@ public class FirstFragment extends Fragment {
 //        }
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -74,19 +77,28 @@ public class FirstFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_first, container, false);
         dataSet = new ArrayList<Task>();
         dataSet.add(new Task("Task 1"));
-        llistat = view.findViewById(R.id.rLlistat2);
-        taskAdapter = new TaskAdapter(dataSet);
-        layoutManager = new LinearLayoutManager(getContext());
-        llistat.setLayoutManager(layoutManager);
-        llistat.setAdapter(taskAdapter);
+
+
+
         btnAfegir = view.findViewById(R.id.button2);
         btnAfegir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // El que volem fer al click, agefir fila al llistat
+                String text = editText.getText().toString();
+                dataSet.add(new Task(text));
+                taskAdapter.notifyDataSetChanged(); //Avisa al Adapter de que s'han modificat les dades
+                editText.setText("");
             }
         });
-
+        editText = view.findViewById(R.id.textAfgir2);
+        llistat = view.findViewById(R.id.rLlistat2);
+        taskAdapter = new TaskAdapter(dataSet);
+        taskAdapter.setListener((LlistatActivity) getActivity());
+        //Configurem el RecyclerView:
+        llistat.setAdapter(taskAdapter);
+        layoutManager = new LinearLayoutManager(getActivity()); //Canvi this a getActivity
+        llistat.setLayoutManager(layoutManager);//Configurar com es veuen les files
         return view;
 
     }
