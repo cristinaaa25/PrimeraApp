@@ -145,6 +145,7 @@ public class LlistatActivity extends AppCompatActivity implements
     @Override
     public void onConfigurationChanged(@NonNull Configuration newConfig) {
 
+        boolean change = true;
         FragmentManager fm = getSupportFragmentManager();
         Fragment retainedFragment = fm.findFragmentById(R.id.frame);
         //Si estamos en el detalle, no cambiar la vista, solo en el listado:
